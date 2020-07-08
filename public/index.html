@@ -37,15 +37,17 @@ limitations under the License.
       <h1> welcome to one big group chat. </h1>
       <h2> a group chat with the entire world. </h2>
       <!-- Button that handles sign-in/sign-out -->
-      <h3 id="display-name"> Please log in so people know your name. </h3>
+      <h3 id="display-name"> Please log in so people know your name.</h3>
       <button disabled id="quickstart-sign-in">Log in with Facebook</button>
+      <p>  Don't worry, we only use your name from Facebook. </p>
+      <p>  All messages are eventually deleted from the server. We only keep the last 15. </p>
 
       <div>
         <span> Other people currently in the chat: </span>
         <span id="live-user-count"> 0 </span>
       </div>
       <div id="private-content">
-        <div id="desktop" style="display: flex;">
+        <div id="desktop" style="display: block;">
           <div id="chatbox">
             <div id="comment-box" >
               <div id="comment-list">
@@ -54,9 +56,9 @@ limitations under the License.
             <textarea id="comment-entry" disabled placeholder="Type here to speak to the world"></textarea>
             <button id="submit-button" onclick="Submit()" disabled> Submit </button>
           </div>
-          <div id="browser">
-            <iframe src="https://google.com"></iframe>
-          </div>
+          <!-- <div id="browser">
+            <iframe src="https://joebiden.com/blackamerica/" title="democracy-browser"></iframe>
+          </div> -->
         </div>
       </div>
     </div>

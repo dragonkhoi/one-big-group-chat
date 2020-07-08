@@ -164,8 +164,6 @@ function getRandomColor() {
         if (user) {
           // User is signed in.
           var displayName = user.displayName;
-          var email = user.email;
-          var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
@@ -321,7 +319,7 @@ function getRandomColor() {
           console.log("LOGGED OUT USER! ");
 
           document.getElementById('quickstart-sign-in').textContent = 'Log in with Facebook';
-          document.getElementById('display-name').textContent = "Please log in";
+          document.getElementById('display-name').textContent = "Please log in so people know your name.";
           document.getElementById('comment-entry').disabled = true;
           document.getElementById('submit-button').disabled = true;
           document.getElementById('private-content').style['visibility'] = "hidden";
