@@ -1,0 +1,46 @@
+<!DOCTYPE html
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>create a big groupchat</title>
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  <script src="/__/firebase/7.15.5/firebase-app.js"></script>
+  <script src="/__/firebase/7.15.5/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.15.5/firebase-auth.js"></script>
+  <script src="/__/firebase/7.15.5/firebase-database.js"></script>
+
+  <script src="/__/firebase/init.js"></script>
+  <script src="js/create.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="navbar" >
+    <a href="create.html"> get your own big group chat </a>
+  </div>
+  <div>
+    <div style="text-align: center;">
+      <!-- <h1 style="color: #FF0000"> currently down for maintenance </h1> -->
+
+      <h1> make your own big group chat. </h1>
+      <h2> a group chat anyone can join with a link. </h2>
+      <!-- Button that handles sign-in/sign-out -->
+      <h3 id="display-name"> Please log in so people know your name.</h3>
+      <button disabled id="quickstart-sign-in">Log in with Facebook</button>
+
+      <div>
+        <h3 id="preview-link"> https://onebiggroupchat.com/?room=0 </h3>
+        <!-- <input id="room-id"> 0 </input> -->
+        <input id="chat-name" placeholder="New Group Chat Name">  </input>
+        <button id="create-button" onclick="CreateGroup()"> make my own big group chat </button>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

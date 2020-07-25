@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<!--
-Copyright (c) 2016 Google Inc.
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
+<!DOCTYPE html
 <html>
 <head>
   <meta charset=utf-8 />
@@ -32,33 +20,54 @@ limitations under the License.
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- <div id="navbar" >
+    <a href="create.html"> get your own big group chat </a>
+  </div> -->
   <div>
     <div style="text-align: center;">
-      <h1> welcome to one big group chat. </h1>
-      <h2> a group chat with the entire world. </h2>
+      <!-- <h1 style="color: #FF0000"> currently down for maintenance </h1> -->
+
+      <h1 id="welcome-message"> welcome to one big group chat. </h1>
+      <h2 id="subtitle"> a group chat with the entire world. </h2>
       <!-- Button that handles sign-in/sign-out -->
       <h3 id="display-name"> Please log in so people know your name.</h3>
       <button disabled id="quickstart-sign-in">Log in with Facebook</button>
-      <p>  Don't worry, we only use your name from Facebook. </p>
-      <p>  All messages are eventually deleted from the server. We only keep the last 15. </p>
+      <p>  don't worry, we only use your name from Facebook. </p>
+      <p>  all messages are eventually deleted from the server. We only keep the last 15. </p>
+      <p> you can vote to put someone in TIMEOUT if they really deserve it. </p>
 
       <div>
         <span> Other people currently in the chat: </span>
         <span id="live-user-count"> 0 </span>
+        <p id="invite-link">    Invite your friends! Send them onebiggroupchat.com </p>
       </div>
       <div id="private-content">
-        <div id="desktop" style="display: block;">
+        <div id="desktop" style="display: flex; justify-content: center;">
           <div id="chatbox">
-            <div id="comment-box" >
+            <div id="comment-box" class="windows-xp-window">
               <div id="comment-list">
               </div>
             </div>
             <textarea id="comment-entry" disabled placeholder="Type here to speak to the world"></textarea>
             <button id="submit-button" onclick="Submit()" disabled> Submit </button>
           </div>
+
           <!-- <div id="browser">
-            <iframe src="https://joebiden.com/blackamerica/" title="democracy-browser"></iframe>
+            <iframe src="" title="democracy-browser"></iframe>
           </div> -->
+        </div>
+        <div id="timeout">
+          <p> these people are in timeout. they're reflecting on their actions. </p>
+          <p id="list-of-timeoutees"></p>
+          <p id="timeout-status"></p>
+          <button id="toggle-timeout-button"  onclick="ToggleTimeout()"> Hide the Timeout chat </button>
+          <div id="timeout-box" style="visibility: visible" class="windows-xp-window">
+            <div id="timeout-comment-list">
+            </div>
+          </div>
+
+            <textarea id="timeout-comment-entry" style="visibility: hidden" disabled placeholder="Type here to speak to the other people in timeout"></textarea>
+            <button id="timeout-submit-button" style="visibility: hidden" onclick="SubmitTimeout()" disabled> Submit </button>
         </div>
       </div>
     </div>

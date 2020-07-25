@@ -1,12 +1,36 @@
 {
   /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
   "rules": {
+    "chats": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
     "online": {
-      ".read": "true",
+      ".read": "auth != null",
       ".write": "auth != null"
     },
     "posts": {
       ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "users": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "timeoutees": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "nominated-timeoutees": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "timeout-posts": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "live-user-count": {
+      ".read": "true",
       ".write": "auth != null"
     }
   }
